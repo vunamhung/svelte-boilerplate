@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  button {
+    @apply focus:outline-none;
+  }
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-base;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .overlay {
+    @apply before:empty-content before:rounded-xl before:bg-black before:inset-0 before:absolute before:bg-opacity-50;
+  }
+}
+
+@layer utilities {
+  @variants before, after {
+    .empty-content {
+      content: '';
+    }
+  }
+}
